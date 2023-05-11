@@ -1,0 +1,17 @@
+.pizza-type {
+    background: #F9F9F9;
+    border-radius: 30px;
+    border-color: transparent;
+    padding: 15px 20px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.015em;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.active-type {
+    background: #282828;
+    color: #FFFFFF;
+}

@@ -1,0 +1,39 @@
+.sort-filters {
+    display: flex;
+    align-items: last baseline;
+}
+
+.arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;    
+    border-bottom: 5px solid black;
+    margin-right: 8px;
+}
+
+.sort-type {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.015em;
+    color: #2C2C2C;
+    margin-right: 8px;
+}
+
+.sort-select {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.015em;
+    color: #FE5F1E;
+    cursor: pointer;
+    outline: transparent;
+    appearance: none;
+    border-color: transparent;
+    border-bottom: 1px dashed #FE5F1E;
+}
+
+.sort-select option{
+    color: #2C2C2C;
+}
