@@ -5,14 +5,14 @@ import './sortFilters.css'
 const SortFilters = ({ queries, setQueries }) => {
   const [query, setQuery] = useState('Popularity')
 
-  const selectSortQuery = e => {
+  const selectSortQuery = () => {
     setQueries({
       ...queries,
       sort: query
     })
   }
 
-  useEffect(() => selectSortQuery, [query])
+  useEffect(() => selectSortQuery, [query.filter])
 
   return (
     <div className='sort-filters'>
