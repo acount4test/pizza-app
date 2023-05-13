@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
-import { sortTypes } from '../../lib/sortTypes'
-import './sortFilters.css'
+import { sortTypes } from '../../libs/sortTypes'
 
 const SortFilters = ({ queries, setQueries }) => {
   const [query, setQuery] = useState('Popularity')
@@ -16,10 +15,10 @@ const SortFilters = ({ queries, setQueries }) => {
 
   return (
     <div className='sort-filters'>
-      <div className='arrow-up'></div>
-      <p className='sort-type'>Sort by:</p>
+      <div className='sort-filters__arrow-up'></div>
+      <p className='sort-filters__name'>Sort by:</p>
       <select
-        className='sort-select'
+        className='sort-filters__select'
         value={query}
         onChange={e => setQuery(e.target.value)}
       >

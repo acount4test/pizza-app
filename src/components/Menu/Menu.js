@@ -1,17 +1,15 @@
 import { useState } from 'react'
 import PizzaCard from '../PizzaCard/PizzaCard'
-import './menu.css'
 
 const Menu = ({ category }) => {
   const [allOrders, setAllOrders] = useState({})
   const [total, setTotal] = useState(0)
-  console.log('rerender')
 
   return (
-    <>
-      <div className='title'>{category} pizzas</div>
+    <div className='menu'>
+      <div className='menu__title'>{category} pizzas</div>
       <h1>All orders : {total}</h1>
-      <div className='menu'>
+      <div className='menu__items'>
         <PizzaCard
           name={'barbecue'}
           allOrders={allOrders}
@@ -49,7 +47,7 @@ const Menu = ({ category }) => {
           setTotal={setTotal}
         />
       </div>
-    </>
+    </div>
   )
 }
 

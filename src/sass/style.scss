@@ -1,0 +1,25 @@
+@import './libs/normalize';
+@import './base/variables';
+
+.main {
+  max-width: $max_width;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 50px 0 95px;
+}
+
+@media (max-width: 610px) {
+  .main {
+    padding: 10px 5px;
+  }
+}
+
+@import './blocks/navigation';
+@import './blocks/logoBanner';
+@import './blocks/cartInfo';
+@import './blocks/menuFilters';
+@import './blocks/sortFilters';
+@import './blocks/typesItem';
+@import './blocks/typesFilter';
+@import './blocks/menu';
+@import './blocks/pizzaCard';

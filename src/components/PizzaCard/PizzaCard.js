@@ -1,13 +1,12 @@
 import { useEffect, useState } from 'react'
 import img from '../../assets/pizzas/cheesburger.svg'
-import './pizzaCard.css'
 
 const PizzaCard = ({ name, allOrders, setAllOrders, setTotal }) => {
   const [order, setOrder] = useState(null)
   const [title, setTitle] = useState(name)
   const [totalCount, setTotalCount] = useState(0)
 
-  const total = Object.values(allOrders).reduce((acc, value) => acc + value, 0)
+  console.log('rerender')
 
   const handleClick = () => {
     setOrder(order => order + 1)
@@ -20,32 +19,41 @@ const PizzaCard = ({ name, allOrders, setAllOrders, setTotal }) => {
       [title]: totalCount
     }))
 
+    const total = Object.values(allOrders).reduce(
+      (acc, value) => acc + value,
+      0
+    )
+
     setTotal(total)
   }, [totalCount])
 
-  const btnStyle = order ? 'add active-add' : 'add'
-  const plusSignStyle = order ? 'plus active-plus' : 'plus'
+  const btnStyle = order
+    ? 'card__details-add card__details-add--active'
+    : 'card__details-add'
+  const plusSignStyle = order
+    ? 'card__details-plus card__details-plus--active'
+    : 'card__details-plus`'
 
   return (
     <div className='card'>
-      <img className='card-img' src={img} alt='cheesburger' />
-      <div className='title card-title'>{name.toUpperCase()}</div>
-      <div className='description'>
-        <div className='recipe'>
-          <div className='active-recipe'>Thin-crust</div>
+      <img className='card__img' src={img} alt='cheesburger' />
+      <div className='card__title'>{name.toUpperCase()}</div>
+      <div className='card__description'>
+        <div className='card__description-recipe'>
+          <div className='card__description-recipe--active'>Thin-crust</div>
           <div>Traditional</div>
         </div>
-        <div className='size'>
+        <div className='card__description-size'>
           <p>26 cm.</p>
-          <p className='active-size'>30 cm.</p>
+          <p className='card__description-size--active'>30 cm.</p>
           <p>40 cm.</p>
         </div>
       </div>
-      <div className='card-details'>
-        <div className='pizza-price'>from 15€</div>
+      <div className='card__details'>
+        <div className='card__details-price'>from 15€</div>
         <button className={btnStyle} onClick={handleClick}>
           <span className={plusSignStyle}></span>Add to Cart{' '}
-          <div className='qty'>{order}</div>
+          <div className='card__details-qty'>{order}</div>
         </button>
       </div>
     </div>

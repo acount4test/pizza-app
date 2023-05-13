@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import SortFilters from '../SortFilters/SortFilters'
 import TypesFilter from '../TypesFilter/TypesFilter'
-import './menuFilters.css'
 
 const MenuFilters = ({ setCategory }) => {
   const [queries, setQueries] = useState({ filter: 'All', sort: 'Popularity' })

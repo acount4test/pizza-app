@@ -1,0 +1,37 @@
+.sort-filters {
+  display: flex;
+  align-items: last baseline;
+  &__arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid black;
+    margin-right: 8px;
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.015em;
+    color: #2c2c2c;
+    margin-right: 8px;
+  }
+
+  &__select {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.015em;
+    color: $main_color;
+    cursor: pointer;
+    outline: transparent;
+    appearance: none;
+    border-color: transparent;
+    border-bottom: 1px dashed $main_color;
+    & option {
+      color: #2c2c2c;
+    }
+  }
+}

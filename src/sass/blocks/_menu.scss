@@ -1,0 +1,25 @@
+.menu {
+  &__title {
+    margin-top: 32px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    letter-spacing: 0.01em;
+  }
+  &__items {
+    display: grid;
+    gap: 65px 35px;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-rows: auto;
+    grid-auto-flow: row;
+  }
+}
+
+@media (max-width: 610px) {
+  .menu {
+    &__title {
+      text-align: center;
+    }
+  }
+}

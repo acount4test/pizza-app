@@ -1,7 +1,6 @@
 import { useState } from 'react'
-import { pizzaTypes } from '../../lib/pizzaTypes'
-import TypeItem from '../TypeItem/TypeItem'
-import './typesFilter.css'
+import { pizzaTypes } from '../../libs/pizzaTypes'
+import TypeItem from '../TypesItem/TypesItem'
 
 const TypesFilter = ({ queries, setQueries }) => {
   const [filter, setFilter] = useState('All')
@@ -17,7 +16,7 @@ const TypesFilter = ({ queries, setQueries }) => {
 
   return (
     <>
-      <div className='types'>
+      <div className='types-filter'>
         {pizzaTypes.map(({ name, active }) => (
           <TypeItem
             key={name}
